@@ -3087,9 +3087,41 @@ a.card.docs-card > * { margin-top: 0; }
 }
 .proof-card-feature blockquote {
   max-width: 65ch;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.45rem;
+  line-height: 1.35;
 }
-.proof-card-feature blockquote { font-family: var(--font-display); font-weight: 700; font-size: 1.45rem; line-height: 1.35; }
-.proof-band { display: grid; gap: var(--space-6); grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); margin-bottom: var(--space-8); }
+
+.proof-card-feature blockquote {
+  max-width: 65ch;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.45rem;
+  line-height: 1.35;
+}
+
+/* improved featured testimonial on small screens */
+@media (max-width: 479px) {
+  .proof-card-feature {
+    padding: var(--space-6);
+  }
+
+  .proof-card-feature blockquote {
+    font-size: 1.2rem;
+    line-height: 1.45;
+  }
+
+  .proof-card-feature .proof-mark {
+    font-size: 3.5rem;
+  }
+}
+.proof-band {
+  display: grid;
+  gap: var(--space-6);
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  margin-bottom: var(--space-8);
+}
 .proof-band figure { margin: 0; padding: var(--card-pad, var(--space-6)); }
 /* Rotating proof (solutions pages): one quote at a time. The first quote
    shows with no JavaScript; the nav only appears once
@@ -3242,10 +3274,17 @@ a.card.docs-card > * { margin-top: 0; }
 }
 .plan-features li { position: relative; padding-left: 26px; color: var(--ink); }
 .plan-features li::before {
-  content: ""; position: absolute; left: 2px; top: 6px; width: 12px; height: 7px;
-  border-left: 2px solid var(--teal); border-bottom: 2px solid var(--teal);
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 6px;
+  width: 12px;
+  height: 7px;
+  border-left: 2px solid var(--teal);
+  border-bottom: 2px solid var(--teal);
   transform: rotate(-45deg);
 }
+
 .pricing-included .h3 { font-size: 18px; }
 .pricing-refund { padding: clamp(24px, 5vw, 56px); border-radius: var(--radius-xl); }
 .refund-steps {
