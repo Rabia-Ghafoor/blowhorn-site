@@ -3079,20 +3079,10 @@ a.card.docs-card > * { margin-top: 0; }
 .proof-card-feature {
   padding: var(--space-8);
 }
-.proof-card.card-field {
-  --card-shadow: var(--shadow-soft);
-}
+.proof-card.card-field,
 .proof-card.card-plain {
   --card-shadow: var(--shadow-soft);
 }
-.proof-card-feature blockquote {
-  max-width: 65ch;
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.45rem;
-  line-height: 1.35;
-}
-
 .proof-card-feature blockquote {
   max-width: 65ch;
   font-family: var(--font-display);
